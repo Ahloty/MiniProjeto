@@ -14,39 +14,54 @@
 
         <nav id="menu">
             <ul>
-                <li class="opcMenu"><a onclick="onePage('home', 'conteudo')">Inicio</a></li>
-                <li class="opcMenu"><a onclick="onePage('cadastro', 'conteudo')">Agenda</a></li>
+                <li id="opcMenu">Inicio</li>
             </ul>
         </nav>
     </header>
 
     <main id="containerConteudo">
-        <section id="estatic">
-            <article class="estaticPetShop">
-                <h3 class="titulo">Total:</h3>
-                <span id="total"></span>
-            </article>
-
-            <article class="estaticPetShop">
-                <h3 class="titulo">Agendados:</h3>
-                <span id="agendados"></span>
-            </article>
-
-            <article class="estaticPetShop">
-                <h3 class="titulo">Consultados:</h3>
-                <span id="consultados"></span>
-            </article>
-        </section>
-
-        <sectio id="blocoPacientes">
-            <h2 class="titulo">Histórico</h2>
-            <div id="historico">
-
-            </div>
-        </sectio>
+        <main id="containerConteudo">
+            <section id="barraPesquisa">
+                <input type="search" id="intBusca" placeholder="Pesquise aqui...">
+                <button id="pesquisa"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </section>
+    
+            <section id="addNewAgendamento">
+                <button id="addAgendamento"><i class="fa-solid fa-plus"> Novo Agendamento</i></button>
+    
+                <dialog>
+                    <div class="box">
+                        <label>Nome do Dono: </label>
+                        <input type="text" name="nomeDono" id="nomeDono">
+                    </div>
+                    <div class="box">
+                        <label>Nome do Pet: </label>
+                        <input type="text" name="nomeDono" id="nomeAnimal">
+                    </div>
+                    <div class="box">
+                        <label>Raça do Pet: </label>
+                        <input type="text" name="raca" id="raca">
+                    </div>
+                    <div class="box">
+                        <label>Classificação de Risco: </label>
+                        <input type="text" name="grauRisco" id="grau">
+                    </div>
+                    
+                    <button id="confirmar">Adicionar</button>
+                    <button id="cancela">Cancelar</button>
+                </dialog>
+            </section>
+    
+            <section id="listaAgenda">
+                <label>Dono: <span class="span"></span></label>
+                <label>Nome do Pet: <span class="span"></span></label>
+                <label>Raça: <span class="span"></span></label>
+                <label>Grau: <span class="span"></span></label>
+            </section>
+        </main>
     </main>
 
-    <script src="../js/script.js"></script>
-    <script src="../js/movePage.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/class.js"></script>
 </body>
 </html>
