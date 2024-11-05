@@ -1,5 +1,5 @@
 class Agendamento{
-    constructor(nomeDono, nomeAnimal, raca, grauRisco){
+    constructor(nomeDono,nomeAnimal, raca, grauRisco){
         this.nomeDono = nomeDono;
         this.nomeAnimal = nomeAnimal;
         this.raca = raca;
@@ -7,10 +7,9 @@ class Agendamento{
     }
 
     exibirAgendamento(){
-        span[0].innerHTML = this.nomeDono;
-        span[1].innerHTML = this.nomeAnimal;
-        span[2].innerHTML = this.raca;
-        span[3].innerHTML = this.grau;
+        return `Dono: ${this.nomeDono} Nome do Pet: ${this.nomeAnimal} Raça: ${this.raca} Grau de risco: ${this.grauRisco}`
     }
 
 }
+
+export {Agendamento};
