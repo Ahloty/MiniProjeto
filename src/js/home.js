@@ -77,6 +77,7 @@ function adicionarCadastroNaLista(agenda) {
 
 // Função de validação
 function validarInput(nomeDono, nomeAnimal, raca, grauRisco) {
+    // BUG NAO ESTA DIFERECIANDO SE E UMA STRING OU NUMBER
     if (typeof nomeDono !== 'string' || nomeDono.trim() === '' ||
         typeof nomeAnimal !== 'string' || nomeAnimal.trim() === '' ||
         typeof raca !== 'string' || raca.trim() === '') {
