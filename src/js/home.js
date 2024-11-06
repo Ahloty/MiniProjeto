@@ -6,7 +6,7 @@ const inforCliente = {
     raca: document.querySelector('#raca'),
     grauRisco: document.querySelector('#grau')
 }
-const btnAtiva = document.getElementById('addAgendamento');
+const btnAtiva = document.getElementById('addCadastro');
 const modal = document.querySelector('dialog');
 const adicionar = document.querySelector('#confirmar');
 const cancelar = document.querySelector('#cancela');
@@ -31,7 +31,7 @@ adicionar.addEventListener('click', () => {
     }
 
     const agenda = new Agendamento(nomeDono, nomeAnimal, raca, grauRisco);
-    adicionarAgendamentoNaLista(agenda);
+    adicionarCadastroNaLista(agenda);
     modal.close();
 })
 
@@ -41,20 +41,25 @@ cancelar.addEventListener('click', () => {
 })
 
 // Função para adicionar agendamento na lista
-function adicionarAgendamentoNaLista(agenda) {
+function adicionarCadastroNaLista(agenda) {
     const li = document.createElement('li');
-    li.textContent = agenda.exibirAgendamento();
+    li.textContent = agenda.exibirCadastro();
 
     // BUTTON E FUNÇÃO DE EXCLUIR AGENDAMENTO
-    const btndelete = document.createElement('button');
-    btndelete.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-    btndelete.addEventListener('click', () => {
+    const btnDelete = document.createElement('button');
+    btnDelete.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    btnDelete.style.padding = '0.2dvw'
+    btnDelete.style.marginLeft = `0.2dvw`
+    btnDelete.style.fontSize = ''
+    btnDelete.addEventListener('click', () => {
         li.remove();
     });
 
     // BUTTON E FUNÇÃO DE EDITAR O AGENDAMENTO
     const btnEdit = document.createElement('button');
     btnEdit.innerHTML = '<i class="fa-solid fa-pen"></i>';
+    btnEdit.style.padding = '0.2dvw'
+    btnEdit.style.marginLeft = `0.2dvw`
     btnEdit.addEventListener('click', () => {
         inforCliente.nomeDono.value = agenda.nomeDono;
         inforCliente.nomeAnimal.value = agenda.nomeAnimal;
@@ -66,7 +71,7 @@ function adicionarAgendamentoNaLista(agenda) {
     });
 
     li.appendChild(btnEdit);
-    li.appendChild(btndelete);
+    li.appendChild(btnDelete);
     addLista.appendChild(li);
 }
 

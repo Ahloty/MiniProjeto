@@ -15,7 +15,7 @@
 
         <nav id="menu">
             <ul>
-                <li id="opcMenu"><i class="fa-sharp fa-solid fa-house"></i>Inicio</li>
+                <li id="opcMenu"><i class="fa-sharp fa-solid fa-house" id="home"></i>Inicio</li>
             </ul>
         </nav>
     </header>
@@ -26,33 +26,38 @@
                 <button id="pesquisa"><i class="fa-solid fa-magnifying-glass"></i></button>
             </section>
     
-            <section id="addNewAgendamento">
-                <button id="addAgendamento"><i class="fa-solid fa-plus"> Novo Agendamento</i></button>
-    
-                <dialog>
-                    <div class="box">
-                        <label>Nome do Dono: </label>
-                        <input type="text" name="nomeDono" id="nomeDono">
-                    </div>
-                    <div class="box">
-                        <label>Nome do Pet: </label>
-                        <input type="text" name="nomeDono" id="nomeAnimal">
-                    </div>
-                    <div class="box">
-                        <label>Raça do Pet: </label>
-                        <input type="text" name="raca" id="raca">
-                    </div>
-                    <div class="box">
-                        <label>Classificação de Risco: </label>
-                        <input type="number" name="grauRisco" id="grau">
-                    </div>
-                    
-                    <button id="confirmar">Adicionar</button>
-                    <button id="cancela">Cancelar</button>
-                </dialog>
+            <section id="addNewCadastro">
+                <article class="boxInfor">
+                    <button id="addCadastro"><i class="fa-solid fa-plus"> Novo Cadastro</i></button>
+                </article>
+
+                <article class="boxInfor">
+                    <dialog id="boxCadastro">
+                        <div class="box">
+                            <label>Nome do Dono: </label>
+                            <input type="text" name="nomeDono" id="nomeDono">
+                        </div>
+                        <div class="box">
+                            <label>Nome do Pet: </label>
+                            <input type="text" name="nomeDono" id="nomeAnimal">
+                        </div>
+                        <div class="box">
+                            <label>Raça do Pet: </label>
+                            <input type="text" name="raca" id="raca">
+                        </div>
+                        <div class="box">
+                            <label>Classificação de Risco: </label>
+                            <input type="number" name="grauRisco" id="grau">
+                        </div>
+                        
+                        <button id="confirmar">Adicionar</button>
+                        <button id="cancela">Cancelar</button>
+                    </dialog>
+                </article>
+
             </section>
     
-            <section id="listaAgenda">
+            <section id="listaCadastro">
                 <ul id="lista">
 
                 </ul>

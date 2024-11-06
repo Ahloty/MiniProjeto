@@ -6,8 +6,8 @@ class Agendamento{
         this.grauRisco = grauRisco;
     }
 
-    exibirAgendamento(){
-        return `Dono: ${this.nomeDono} Nome do Pet: ${this.nomeAnimal} Raça: ${this.raca} Grau de risco: ${this.grauRisco}`
+    exibirCadastro(){
+        return `Dono: ${this.nomeDono} | Nome do Pet: ${this.nomeAnimal} | Raça: ${this.raca} | Grau de risco: ${this.grauRisco}`
     }
 
 }

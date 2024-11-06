@@ -39,16 +39,82 @@
     width: 10dvw;
 }
 
+#home{
+    margin-right: 0.5dvw;
+}
+
 /* BARRA DE PESQUISA */
 #containerConteudo{
     display: flex;
     flex-direction: column;
     margin: 1dvw;
-    padding-left: 29dvw;
+    padding-left: 13dvw;
     gap: 20dvh;
 }
 
 #barraPesquisa{
    display: flex;
-   gap: 5dvw;
+   align-items: center;
+   padding-left: 10dvw; 
+   gap: 1dvw;
+}
+
+#intBusca{
+    width: 22dvw;
+    height: 3dvh;
+    border: none;
+    background: #D7D6D7;
+    box-shadow: 0 0 10px #353436;
+    border-radius: 8px;
+}
+
+#pesquisa{
+    width: 3dvw;
+    height: 4dvh;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    background: #449934;
+    color: #FBF9FD;
+    box-shadow: 0 0 10px#353436;
+}
+
+#pesquisa:hover{
+    transition: all 1s;
+    box-shadow: 3px 3px 20px #449934;
+}
+
+/* ADICIONAR CADASTRO */
+#boxInfor{
+    display: flex;
+    justify-content: center;
+}
+
+#addCadastro{
+    margin-left: 15dvw;
+    padding: 0.5dvw;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background: #449934;
+    color: #FBF9FD;
+    box-shadow: 0 0 10px #353436;
+}
+
+.box{
+    color: #FBF9FD;
+}
+
+/* LISTA DOS CADASTRO */
+#lista{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3rem;
+    background: #75B260;
+    height: auto;
+    width: auto;
+    border-radius: 2px;
+    color: #FBF9FD;
+    list-style-type: none;
 }

@@ -1,0 +1,14 @@
+#boxCadastro{
+    margin: 25dvw;
+    margin-left: 35dvw;
+    padding: 2dvh;
+    font-size: 1.5rem;
+    text-align: start;
+    border: none;
+    border-radius: 10px;
+    background:#449934;
+}
+
+#boxcadastro::backdrop{
+    background-color: rgba(0, 0, 0, 0.671);
+}
