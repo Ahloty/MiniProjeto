@@ -52,6 +52,7 @@ function adicionarCadastroNaLista(agenda) {
     btnDelete.style.marginLeft = `0.2dvw`
     btnDelete.style.fontSize = ''
     btnDelete.addEventListener('click', () => {
+        alert("Removido com sucesso")
         li.remove();
     });
 
@@ -77,10 +78,7 @@ function adicionarCadastroNaLista(agenda) {
 
 // Função de validação
 function validarInput(nomeDono, nomeAnimal, raca, grauRisco) {
-    // BUG NAO ESTA DIFERECIANDO SE E UMA STRING OU NUMBER
-    if (typeof nomeDono !== 'string' || nomeDono.trim() === '' ||
-        typeof nomeAnimal !== 'string' || nomeAnimal.trim() === '' ||
-        typeof raca !== 'string' || raca.trim() === '') {
+    if (nomeDono.trim() === '' || nomeAnimal.trim() === '' || raca.trim() === '') {
         return { error: true, message: 'Os campos Nome do Dono, Nome do Animal e Raça devem ser preenchidos corretamente.' };
     }
     if (typeof grauRisco !== 'number' || isNaN(grauRisco) || grauRisco <= 0 || grauRisco > 5) {
